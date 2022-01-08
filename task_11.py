@@ -11,8 +11,11 @@ class Dessert:
         return self.__name, self.__calories
 
     def is_healthy(self):
-        if self.__calories < 200:
-            return True
+        try:
+            if self.__calories < 200:
+                return True
+        except:
+            pass
 
     def is_delicious(self):
         return True

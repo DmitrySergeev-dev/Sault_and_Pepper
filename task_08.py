@@ -1,8 +1,8 @@
 def multiply_numbers(inputs=None):
+    msg = 'None'
     # what if function was run without arguments
     if inputs is None:
-        print('None')
-        return
+        return msg
     lst = []  # total list
     # what if inputs is float
     if type(inputs) == float:
@@ -17,18 +17,17 @@ def multiply_numbers(inputs=None):
                 continue
     # what if argument was without any digits
     if len(lst) == 0:
-        print('None')
-        return
+        return msg
     res = 1
     for el in lst:
         res *= el
-    print(res)
+    return (res)
 
 
-# TEST
-multiply_numbers()
-multiply_numbers('ss')
-multiply_numbers('1234')
-multiply_numbers('sssdd34')
-multiply_numbers(2.3)
-multiply_numbers([5, 6, 4])
+# # TEST
+# multiply_numbers()
+# multiply_numbers('ss')
+# multiply_numbers('1234')
+# multiply_numbers('sssdd34')
+# multiply_numbers(2.3)
+# multiply_numbers([5, 6, 4])

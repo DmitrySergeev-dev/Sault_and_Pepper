@@ -24,14 +24,14 @@ def sort_list(list):
 
         # add el_min in the end of array
         list.append(el_min)
-        print(list)
+        return (list)
 
     except ValueError:
-        print(list)
+        return (list)
 
 
 # TEST
-sort_list([])
-sort_list([2, 4, 6, 8])
-sort_list([1])
-sort_list([1, 2, 1, 3])
+# sort_list([])
+# sort_list([2, 4, 6, 8])
+# sort_list([1])
+# sort_list([1, 2, 1, 3])

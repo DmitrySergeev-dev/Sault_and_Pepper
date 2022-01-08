@@ -16,8 +16,8 @@ def combine_anagrams(words_array):
         res.append(match)  # добавляем найденные анаграммы в итоговый список
         lst = [x for x in lst if x not in match]  # исключаем из дальнейшего анализа уже найденные анаграммы
     res = list(filter(None, res))  # избавляемся от пустых элементов
-    print(res)
+    return (res)
 
 
 # TEST
-combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream"])
+# combine_anagrams(["cars", "for", "potatoes", "racs", "four", "scar", "creams", "scream"])

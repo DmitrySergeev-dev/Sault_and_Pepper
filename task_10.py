@@ -6,9 +6,9 @@ def count_words(string):
     for el in uniq_words:
         counters.append(lst.count(el))
     res = dict(zip(uniq_words, counters))
-    print(res)
+    return res
 
 
 # TEST
-count_words("A man, a plan, a canal -- Panama")
-count_words("Doo bee doo bee doo")
+# count_words("A man, a plan, a canal -- Panama")
+# count_words("Doo bee doo bee doo")

@@ -17,29 +17,29 @@ def rps_game_winner(*args):
     verify_players_steps(args)
 
     if args[0][1] == args[1][1]:
-        print(args[0][0], args[0][1])  # case of equal player steps
+        return " ".join(map(str, (args[0][0], args[0][1])))  # case of equal player steps
 
     elif args[0][1] == 'R':
         if args[1][1] == 'S':  # Rock against Scissors
-            print(args[0][0], args[0][1])
+            return " ".join(map(str, (args[0][0], args[0][1])))
         else:
-            print(args[1][0], args[1][1])  # Rock against Paper
+            return " ".join(map(str, (args[1][0], args[1][1])))  # Rock against Paper
 
     elif args[0][1] == 'S':
         if args[1][1] == 'P':
-            print(args[0][0], args[0][1])  # Scissors against Paper
+            return " ".join(map(str, (args[0][0], args[0][1])))  # Scissors against Paper
         else:
-            print(args[1][0], args[1][1])  # Scissors against Rock
+            return " ".join(map(str, (args[1][0], args[1][1])))  # Scissors against Rock
 
     elif args[0][1] == 'P':
         if args[1][1] == 'R':
-            print(args[0][0], args[0][1])  # Paper against Rock
+            return " ".join(map(str, (args[0][0], args[0][1])))  # Paper against Rock
         else:
-            print(args[1][0], args[1][1])  # Paper against Scissors
+            return " ".join(map(str, (args[1][0], args[1][1])))  # Paper against Scissors
 
 # TEST
 
 # rps_game_winner(['player1','P'],['player2','S'],['player3','S'])
-# # rps_game_winner(['player1','P'],['player2','A'])
+# rps_game_winner(['player1','P'],['player2','A'])
 # rps_game_winner(['player1','P'],['player2','S'])
-# rps_game_winner(['player1','P'],['player2','P'])
+# rps_game_winner(['player1', 'P'], ['player2', 'P'])

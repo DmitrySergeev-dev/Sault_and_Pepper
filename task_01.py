@@ -5,12 +5,12 @@ def is_palindrome(string):
     for el in str_string.lower():
         if el.isalpha():
             lst.append(el)
-    print(lst == lst[::-1])
+    return (lst == lst[::-1])
 
 
 # TEST
-is_palindrome("A man, a plan, a canal -- Panama")
-is_palindrome("Madam, I'm Adam!")
-is_palindrome(333)
-is_palindrome(None)
-is_palindrome("Abracadabra")
+# is_palindrome("A man, a plan, a canal -- Panama")
+# is_palindrome("Madam, I'm Adam!")
+# is_palindrome(333)
+# is_palindrome(None)
+# is_palindrome("Abracadabra")

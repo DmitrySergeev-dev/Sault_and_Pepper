@@ -8,10 +8,10 @@ def coincidence(list=[], range=range(0)):
                 num_lst.append(el)
         else:
             continue
-    print(num_lst)
+    return (num_lst)
 
 
-# TEST
-coincidence([1, 2, 3, 4, 5], range(3, 6))
-coincidence()
-coincidence([None, 1, 'foo', 4, 2, 2.5], range(1, 4))
+#  TEST
+# coincidence([1, 2, 3, 4, 5], range(3, 6))
+# coincidence()
+# coincidence([None, 1, 'foo', 4, 2, 2.5], range(1, 4))
