@@ -1,7 +1,32 @@
-from task_11 import Dessert
+class Dessert:
+    def __init__(self, name=None, calories=None):
+        self.__name = name;
+        self.__calories = calories
+        # print("__init__ of Dessert")
 
+    def setDessert(self, name, calories):
+        self.__name = name
+        self.__calories = calories
+
+    def getDessert(self):
+        return self.__name, self.__calories
+
+    def is_healthy(self):
+        try:
+            if self.__calories < 200:
+                return True
+        except:
+            pass
+
+    def is_delicious(self):
+        return True
 
 class JellyBean(Dessert):
+    def __init__(self, name = None, calories = None, flavor=None):
+        super().__init__(name=None, calories=None)
+        # print("__init__ of JellyBean")
+        self.__flavor = flavor
+
     def set_flavor(self, flavor):
         self.__flavor = flavor
 
@@ -13,19 +38,9 @@ class JellyBean(Dessert):
             return False
         else:
             return True
-
-
-# TEST
-# if __name__ == '__main__':
-#     ob1 = JellyBean()
-#     ob1.set_flavor(190)
-#     print(ob1.__dict__)
-#     print(ob1.is_delicious())
-#     ob1.set_flavor("black licorice")
-#     print(ob1.__dict__)
-#     print(ob1.is_delicious())
-#     ob1.set_flavor("smth")
-#     print(ob1.__dict__)
-#     print(ob1.is_delicious())
-
+# j = JellyBean("smb", 450, 500)
+# print(j.__dict__)
+# j.set_flavor("black licorice")
+# print(j.__dict__)
+# print(j.is_delicious())
 
