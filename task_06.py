@@ -1,18 +1,21 @@
+class WrongNumberOfPlayersError(Exception):
+    '''Класс исключения при количестве игроков больше двух'''
+    pass
+
+
+class NoSuchStrategyError(Exception):
+    '''Класс исключения при неправильном ходе игрока'''
+    pass
+
+
 def verify_number(args):
     """validation of players number"""
-
-    class WrongNumberOfPlayersError(Exception):
-        pass
-
     if len(args) > 2:
         raise WrongNumberOfPlayersError
 
 
 def verify_players_steps(args):
     """validation of players steps"""
-
-    class NoSuchStrategyError(Exception):
-        pass
 
     for el in args:
         if el[1] not in ['R', 'P', 'S']:
@@ -21,8 +24,13 @@ def verify_players_steps(args):
 
 def rps_game_winner(*args):
     """RPS-game algorithm"""
-    verify_number(args)
-    verify_players_steps(args)
+    try:
+        verify_number(args)
+        verify_players_steps(args)
+    except WrongNumberOfPlayersError as er:
+        return er
+    except NoSuchStrategyError as er:
+        return er
 
     if args[0][1] == args[1][1]:
         return " ".join(map(str, (args[0][0], args[0][1])))  # case of equal player steps
@@ -46,8 +54,8 @@ def rps_game_winner(*args):
             return " ".join(map(str, (args[1][0], args[1][1])))  # Paper against Scissors
 
 # TEST
-
-# rps_game_winner(['player1','P'],['player2','S'],['player3','S'])
-# rps_game_winner(['player1','P'],['player2','A'])
-# rps_game_winner(['player1','P'],['player2','S'])
+#
+# rps_game_winner(['player1', 'P'], ['player2', 'S'], ['player3', 'S'])
+# rps_game_winner(['player1', 'P'], ['player2', 'A'])
+# rps_game_winner(['player1', 'P'], ['player2', 'S'])
 # rps_game_winner(['player1', 'P'], ['player2', 'P'])
