@@ -9,8 +9,7 @@ def max_odd(array):
     if len(lst_res) != 0:
         return (max(lst_res))
     else:
-        return ('None')
-
+        return None
 
 # TEST
 # max_odd([1, 2, 3, 4, 4])

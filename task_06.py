@@ -1,14 +1,22 @@
 def verify_number(args):
     """validation of players number"""
+
+    class WrongNumberOfPlayersError(Exception):
+        pass
+
     if len(args) > 2:
-        raise Exception('WrongNumberOfPlayersError')
+        raise WrongNumberOfPlayersError
 
 
 def verify_players_steps(args):
     """validation of players steps"""
+
+    class NoSuchStrategyError(Exception):
+        pass
+
     for el in args:
         if el[1] not in ['R', 'P', 'S']:
-            raise Exception('NoSuchStrategyError')
+            raise NoSuchStrategyError
 
 
 def rps_game_winner(*args):
