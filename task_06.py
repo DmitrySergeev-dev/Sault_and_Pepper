@@ -22,7 +22,7 @@ def verify_players_steps(args):
             raise NoSuchStrategyError
 
 
-def rps_game_winner(*args):
+def rps_game_winner(args):
     """RPS-game algorithm"""
     try:
         verify_number(args)
@@ -55,7 +55,7 @@ def rps_game_winner(*args):
 
 # TEST
 #
-# rps_game_winner(['player1', 'P'], ['player2', 'S'], ['player3', 'S'])
-# rps_game_winner(['player1', 'P'], ['player2', 'A'])
-# rps_game_winner(['player1', 'P'], ['player2', 'S'])
-# rps_game_winner(['player1', 'P'], ['player2', 'P'])
+# rps_game_winner([['player1', 'P'], ['player2', 'S'], ['player3', 'S']])
+# rps_game_winner([['player1', 'P'], ['player2', 'A']])
+# rps_game_winner([['player1', 'P'], ['player2', 'S']])
+# rps_game_winner([['player1', 'P'], ['player2', 'P']])
