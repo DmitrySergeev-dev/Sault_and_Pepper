@@ -24,13 +24,15 @@ def verify_players_steps(args):
 
 def rps_game_winner(args):
     """RPS-game algorithm"""
-    try:
-        verify_number(args)
-        verify_players_steps(args)
-    except WrongNumberOfPlayersError as er:
-        return er
-    except NoSuchStrategyError as er:
-        return er
+    # try:
+    #     verify_number(args)
+    #     verify_players_steps(args)
+    # except WrongNumberOfPlayersError as er:
+    #     return er
+    # except NoSuchStrategyError as er:
+    #     return er
+    verify_number(args)
+    verify_players_steps(args)
 
     if args[0][1] == args[1][1]:
         return " ".join(map(str, (args[0][0], args[0][1])))  # case of equal player steps
